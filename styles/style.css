@@ -21,4 +21,197 @@
   font-variation-settings: 'wght' var(--main-font-weight);
   background-color: var(--background-color);
   color: var(--text-color);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.content-section {
+  max-inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  display: grid;
+  justify-items: center;
+  margin-inline: auto;
+}
+
+.header {
+  font-family: var(--accent-font);
+  margin-block: 100px;
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem) 25px;
+  background-color: var(--background-color);
+  border: 2px solid var(--text-color);
+}
+
+.header__title {
+  font-size: clamp(2.5625rem, 2.1339rem + 2.1429vw, 4.0625rem);
+  margin-block-end: 20px;
+  line-height: 100%;
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  margin-block-end: 25px;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 100%;
+  padding: 0;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.theme-menu__item {
+  max-block-size: 14px;
+}
+
+.theme-menu__button:disabled {
+  opacity: 60%;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  block-size: 14px;
+  inline-size: 14px;
+  inset-inline-start: -20px;
+}
+
+.main {
+  margin-block-start: 0;
+  margin-block-end: 50px;
+}
+
+.card {
+  background-color: var(--background-color);
+  border: 2px solid var(--text-color)
+}
+
+.card__title {
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--main-font-weight-accent);
+  margin-inline-start: 10px;
+  margin-inline-end: clamp(0.625rem, 0.3169rem + 1.3146vw, 1.5rem);
+  margin-block-start: clamp(0.1875rem, 0.1655rem + 0.0939vw, 0.25rem);
+  margin-block-end: clamp(0.1875rem, 0.1215rem + 0.2817vw, 0.375rem);
+}
+
+.card__image-wrapper {
+  position: relative;
+}
+
+.card__image-label {
+  position: absolute;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  inset-block-start: 25px;
+  inset-inline-end: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
+  opacity: 50%;
+  mix-blend-mode: hard-light;
+  line-height: 100%;
+  text-shadow:
+    -1px 0 var(--background-color),
+    0 1px var(--background-color),
+    1px 0 var(--background-color),
+    0 -1px var(--background-color);
+}
+
+@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .card__image-label {
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+    text-shadow: none;
+  }
+}
+
+.card__image {
+  inline-size: 100%;
+  object-fit: cover;
+  border-block-start: 2px solid var(--text-color);
+  border-block-end: 2px solid var(--text-color);
+}
+
+.card__paragraphs-wapper {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 25px;
+}
+
+.card__paragraph {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card__buttons-wrapper {
+  display: flex;
+  gap: 12px;
+  padding-inline-end: 25px;
+  padding-block-end: 25px;
+  justify-content: end;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  padding-inline: 0;
+  padding-block-start: 7px;
+  padding-block-end: 3px;
+}
+
+.like-icon {
+  block-size: 24px;
+  inline-size: 27px;
+}
+
+.card__like-button {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 90%;
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  padding: 10.5px 37px;
+}
+
+.footer {
+  display: grid;
+  justify-items: center;
+  padding-block-end: clamp(6.25rem, 6.184rem + 0.2817vw, 6.4375rem);
+}
+
+.footer__button {
+  display: flex;
+  gap: 8px;
+  background-color: var(--background-color);
+  border: 2px solid var(--text-color);
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 90%;
+  padding: 15px 21px 15px 19px;
+  align-items: center;
+}
+
+.footer__button-floppy {
+  block-size: 21px;
+  inline-size: 21px;
+}
+
+@media (width <= 375px) {
+  .header, .main {
+    max-inline-size: 100%;
+  }
+
+  .footer__button {
+    flex-direction: column;
+    align-items: center;
+  }
 }
