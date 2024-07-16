@@ -208,7 +208,6 @@
 
 .card__icon-button {
   background-color: transparent;
-  border: none;
   padding-inline: 0;
   border: 2px solid transparent;
   padding: 0;
@@ -409,14 +408,14 @@
   inline-size: 353px;
 }
 
-.footer__dialog::backdrop {
-  background-color: var(--background-color-dialog);
-}
-
-.footer__dialog-form {
+.footer__dialog[open] {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.footer__dialog::backdrop {
+  background-color: var(--background-color-dialog);
 }
 
 .footer__dialog-header_wrapper {
@@ -446,6 +445,34 @@
   background-color: transparent;
   border: 2px solid var(--text-color);
   padding-block: 10.5px;
+}
+
+.filter_brightness {
+  filter: brightness(300%);
+}
+
+.filter_contrast {
+  filter: contrast(250%);
+}
+
+.filter_grayscale{
+  filter: grayscale(100%)
+}
+
+.filter_saturate {
+  filter: saturate(500%);
+}
+
+.filter_hue-rotate {
+  filter: hue-rotate(90deg);
+}
+
+.filter_sepia {
+  filter: sepia(100%);
+}
+
+.filter_blur {
+  filter: blur(10px) brightness(100%) contrast(150%) grayscale(100%);
 }
 
 @media (width <= 375px) {

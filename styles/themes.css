@@ -15,6 +15,7 @@
   --text-color: #00cc14;
 
   --label-stroke-color: #000;
+  --label-text-color: rgb(0 204 20 / 0.5);
 
   --button-mix-blend-color: #00cc14;
 
@@ -36,6 +37,7 @@
   --text-color: #000;
 
   --label-stroke-color: #fff;
+  --label-text-color: rgb(0 0 0 / 0.5);
 
   --button-mix-blend-color: #fff;
 
@@ -58,6 +60,7 @@
     --text-color: #00cc14;
     
     --label-stroke-color: #000;
+    --label-text-color: rgb(0 204 20 / 0.5);
     
     --button-mix-blend-color: #00cc14;
 
