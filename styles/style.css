@@ -443,6 +443,11 @@
   background-color: transparent;
 }
 
+.footer__dialog-button:focus {
+  box-shadow: 2px 2px var(--text-color);
+  outline: none;
+}
+
 .filter_brightness {
   filter: brightness(300%);
 }
