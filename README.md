@@ -1,1 +1,1 @@
-git@github.com:vovavish/zakrivayuschiy-teg-f.git
+https://github.com/vovavish/zakrivayuschiy-teg-f.git
