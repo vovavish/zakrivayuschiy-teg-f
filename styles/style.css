@@ -455,7 +455,7 @@
   filter: contrast(250%);
 }
 
-.filter_grayscale{
+.filter_grayscale {
   filter: grayscale(100%)
 }
 
