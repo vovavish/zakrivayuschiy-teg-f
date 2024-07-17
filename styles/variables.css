@@ -2,7 +2,7 @@
 
 :root {
   --main-font: Inter-Variable, sans-serif;
-  --accent-font: PressStart2P-Regular, sans-serif;
+  --accent-font: PressStart2P, fantasy;
 
   --main-font-weight: 465;
   --main-font-weight-accent: 785;
